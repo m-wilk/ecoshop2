@@ -6,26 +6,35 @@ const HeaderTop = () => {
     <div className="es-header-top-section">
       <div className="container">
         <div className="d-flex justify-content-between align-items-center">
-          <div className="d-flex justify-content-center align-items-center gap-3">
-            <a className="text-decoration-none text-black" href="#">
-              <span>Account</span>
+          <ul className="nav">
+            <li className="nav-item">
+              <a className="nav-link text-decoration-none text-black" href="#">
+                Account
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-decoration-none text-black" href="#">
+                Track Order
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-decoration-none text-black" href="#">
+                Suport
+              </a>
+            </li>
+          </ul>
+
+          <div className="d-flex align-items-center gap-2">
+            <a className="nav-link text-decoration-none text-black" href="#">
+              <Phone className="me-2" />
+              +00645 4568
             </a>
-            <a className="text-decoration-none text-black" href="#">
-              <span>Track Order</span>
-            </a>
-            <a className="text-decoration-none text-black" href="#">
-              <span>Support</span>
-            </a>
-          </div>
-          <div className="d-flex justify-content-center align-items-center gap-3">
-            <a className="d-flex justify-content-center align-items-center gap-2 text-decoration-none text-black" href="#">
-              <Phone />
-              <span>+00645 4568</span>
-            </a>
+
             <div className="es-divider"></div>
-            <a className="d-flex justify-content-center align-items-center gap-2 text-decoration-none text-black" href="#">
-              <Email />
-              <span>+00645 4568</span>
+
+            <a className="nav-link text-decoration-none text-black" href="#">
+              <Email className="me-2" />
+              +00645 4568
             </a>
           </div>
         </div>

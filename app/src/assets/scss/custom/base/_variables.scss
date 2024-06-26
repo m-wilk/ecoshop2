@@ -12,20 +12,15 @@ $es-white: #ffffff;
 $es-black: #000000;
 $es-contact-form-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
-
-
 //Wlasne zmienne - tekst
 $es-font-family-body: "Inter";
 $es-font-family-secondary: "League Spartan";
 
-
-
-
 // Kolory Bootstrap
 $theme-colors: (
-    "primary":  $es-accent-color
+  "primary": $es-accent-color,
 );
 
 //tekst
-$font-family-sans-serif: $es-font-family-body; 
+$font-family-sans-serif: $es-font-family-body;
 $headings-font-family: $es-font-family-secondary;
