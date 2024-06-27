@@ -1,7 +1,7 @@
 import { ReactComponent as Phone } from "../../../assets/img/phone.svg";
 import { ReactComponent as Email } from "../../../assets/img/email.svg";
 
-const HeaderTop = () => {
+const HeaderTopSection = () => {
   return (
     <div className="es-header-top-section">
       <div className="container">
@@ -23,16 +23,13 @@ const HeaderTop = () => {
               </a>
             </li>
           </ul>
-
           <div className="d-flex align-items-center gap-2">
-            <a className="nav-link text-decoration-none text-black" href="#">
+            <a className="nav-link text-decoration-none text-black me-2" href="#">
               <Phone className="me-2" />
               +00645 4568
             </a>
-
             <div className="es-divider"></div>
-
-            <a className="nav-link text-decoration-none text-black" href="#">
+            <a className="nav-link text-decoration-none text-black ms-2" href="#">
               <Email className="me-2" />
               +00645 4568
             </a>
@@ -43,4 +40,4 @@ const HeaderTop = () => {
   );
 };
 
-export default HeaderTop;
+export default HeaderTopSection;

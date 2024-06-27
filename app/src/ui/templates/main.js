@@ -1,9 +1,11 @@
-import HeaderTop from "../organism/header/HeaderTop";
+import HeaderTopSection from "../organism/header/HeaderTopSection";
+import HeaderCenterSection from "../organism/header/HeaderCenterSection";
 
 const Main = () => {
   return (
     <>
-      <HeaderTop />
+      <HeaderTopSection />
+      <HeaderCenterSection />
       {/* <p>Router</p>
         <p>footer</p> */}
     </>
