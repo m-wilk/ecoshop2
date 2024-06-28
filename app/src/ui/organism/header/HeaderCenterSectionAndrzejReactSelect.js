@@ -4,11 +4,12 @@ import { ReactComponent as CartIconCompare } from "../../../assets/img/compaire.
 import { ReactComponent as ArrowDownIcon } from "../../../assets/img/arrow-down.svg";
 
 const options = [
-  { value: "chocolate", label: "Chocolate" },
-  { value: "strawberry", label: "Strawberry" },
-  { value: "vanilla", label: "Vanilla" },
+  { value: "vegetable", label: "Vegetable" },
+  { value: "fruits", label: "Fruits" },
+  { value: "juice", label: "Juice" },
+  { value: "meat", label: "Meat" },
 ];
-const HeaderCenterSectionAndrzej = () => {
+const HeaderCenterSectionWtyczka = () => {
   const handleChange = (e) => {
     console.log(e);
   };
@@ -19,7 +20,7 @@ const HeaderCenterSectionAndrzej = () => {
         <img src={Logo} />
       </a>
 
-      <form className="d-flex border align-items-center rounded-3">
+      <form className="d-flex border border-primary align-items-center rounded-3">
         <input
           type="text"
           className="form-control border-0 input-reset es-header-search-input"
@@ -29,7 +30,7 @@ const HeaderCenterSectionAndrzej = () => {
         <div className="es-divider"></div>
 
         <Select
-          value={"chocolate"}
+          value={"vegetable"}
           onChange={handleChange}
           options={options}
           styles={{
@@ -77,4 +78,4 @@ const HeaderCenterSectionAndrzej = () => {
   );
 };
 
-export default HeaderCenterSectionAndrzej;
+export default HeaderCenterSectionWtyczka;

@@ -1,8 +1,7 @@
 .es-header-top-section {
-     background: $es-green-100;
-     border-bottom: 1px solid $es-green-100;
-     padding: 0.8rem 0;
-
+  background: $es-green-100;
+  border-bottom: 1px solid $es-green-100;
+  padding: 0.8rem 0;
 }
 
 .es-divider {
@@ -24,8 +23,13 @@
   left: 0px;
   border-color: $es-gray-100;
   box-shadow: $es-contact-form-shadow;
-  li {
-   width: 10rem;
+
+  a {
+    color: black;
+  }
+  a:hover {
+    background: $es-accent-color;
+    color: #fff;
+ 
   }
 }
-
