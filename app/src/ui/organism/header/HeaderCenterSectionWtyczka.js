@@ -2,17 +2,28 @@ import Select from "react-select";
 import Logo from "../../../assets/img/logo.png";
 import { ReactComponent as CartIconCompare } from "../../../assets/img/compaire.svg";
 import { ReactComponent as ArrowDownIcon } from "../../../assets/img/arrow-down.svg";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-const options = [
-  { value: "vegetable", label: "Vegetable" },
-  { value: "fruits", label: "Fruits" },
-  { value: "juice", label: "Juice" },
-  { value: "meat", label: "Meat" },
-];
 const HeaderCenterSectionWtyczka = () => {
-  const handleChange = (e) => {
-    console.log(e);
-  };
+  //pobieranie danych z serwera
+  const [categories, setCategories] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:8100/api/v1/common/categories/")
+      .then((respons) => {
+        setCategories([...respons.data,{value: "", label: "All Categories"}]);
+        console.log(respons.data);
+      });
+  }, []);
+
+  const categoriesOptions = categories.map((categorie) => {
+    return {value: categorie.id, label: categorie.name} 
+  })
+  console.log(categoriesOptions)
+
+  //wybranie kategorji z select
+  const [selectedCategory, setSelectedCategory] = useState({value: "", label: "All Categories"});
 
   return (
     <div className="d-flex container justify-content-between align-items-center pt-4 pb-4">
@@ -30,9 +41,9 @@ const HeaderCenterSectionWtyczka = () => {
         <div className="es-divider"></div>
 
         <Select
-          value={"vegetable"}
-          onChange={handleChange}
-          options={options}
+          value={selectedCategory}
+          onChange={(value) => {setSelectedCategory(value)}}
+          options={categoriesOptions}
           styles={{
             control: (baseStyles, state) => ({
               ...baseStyles,
@@ -40,8 +51,21 @@ const HeaderCenterSectionWtyczka = () => {
               width: "270px",
               boxShadow: "none",
             }),
+
+            option: (baseStyles, state) => {
+              return {
+                ...baseStyles,
+                background: "white",
+                "&:hover": {
+                  background: "#b7b7b7",
+                  color: "#fff",
+                },
+                "&:focus": {
+                  background: "#fff",
+                },
+              };
+            },
           }}
-          autoFocus={false}
           components={{
             IndicatorSeparator: () => null,
             DropdownIndicator: () => (
