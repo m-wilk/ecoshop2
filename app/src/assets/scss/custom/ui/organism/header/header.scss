@@ -33,3 +33,19 @@
  
   }
 }
+
+.es-shop-btn {
+  padding: 0.8rem 2rem;
+  background: $es-orange-300;
+  color: black;
+  margin: 0px;
+  text-align: center;
+  display: inline-block;
+  transition: ease-out;
+  transition-duration: 0.3s;
+  &:hover {
+    box-shadow: inset 300px 0 0 0 black;
+    color: white;
+  }
+}
+

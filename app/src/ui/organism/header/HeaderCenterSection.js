@@ -53,18 +53,30 @@ const HeaderCenterSection = () => {
               setVisible(!visible);
             }}
           >
-            <span className="text-secondary me-5">{selectedCategory.name || "All Category"}</span>
-            <ArrowDownIcon />
+            <div className="d-flex justify-content-between align-items-center w-100">
+              <input
+                className="text-secondary input-reset border-0"
+                value={selectedCategory.name || "All Category"}
+              />
+              <ArrowDownIcon />
+            </div>
+
             <ul
               className={`nav d-flex w-100 flex-column bg-white position-absolute border rounded-3 es-header-search-dropdown-list z-3 ${popUp}`}
             >
               {categories.map((categorie) => {
                 return (
-                  <li onClick={() => {
-                    setSelectedCategory(categorie);
-                    // setVisible(false);
-                  }} key={categorie.id} className="nav-item">
-                    <a className="nav-link text-decoration-none">{categorie.name}</a>
+                  <li
+                    onClick={() => {
+                      setSelectedCategory(categorie);
+                      // setVisible(false);
+                    }}
+                    key={categorie.id}
+                    className="nav-item"
+                  >
+                    <a className="nav-link text-decoration-none">
+                      {categorie.name}
+                    </a>
                   </li>
                 );
               })}
