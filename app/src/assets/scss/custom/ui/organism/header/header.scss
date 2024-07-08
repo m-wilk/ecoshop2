@@ -21,7 +21,6 @@
 .es-header-search-dropdown-list {
   top: 32px;
   left: 0px;
-  border-color: $es-gray-100;
   box-shadow: $es-contact-form-shadow;
 
   a {
@@ -30,7 +29,6 @@
   a:hover {
     background: $es-accent-color;
     color: #fff;
- 
   }
 }
 
@@ -49,3 +47,28 @@
   }
 }
 
+.es-header-menu-dropdown-list {
+  top: 58px;
+  left: 0px;
+  box-shadow: $es-contact-form-shadow;
+  li {
+    border: 1px solid $es-gray-100;
+    a {
+      color: black;
+    }
+    &:hover {
+      background: $es-accent-color;
+      a {
+        color: #fff;
+      }
+      .fill-white-icon {
+        fill: white;
+      }
+    }
+  }
+}
+
+.es-hover-green:hover {
+background: $es-accent-color;
+color: white;
+}

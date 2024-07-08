@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const HeaderCenterSection = () => {
+  //rozwijanie listy
   const [visible, setVisible] = useState(false);
   const popUp = visible ? "" : "visually-hidden";
 

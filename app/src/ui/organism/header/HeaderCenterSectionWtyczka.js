@@ -12,7 +12,7 @@ const HeaderCenterSectionWtyczka = () => {
     axios
       .get("http://localhost:8100/api/v1/common/categories/")
       .then((respons) => {
-        setCategories([...respons.data,{value: "", label: "All Categories"}]);
+        setCategories(respons.data);
         console.log(respons.data);
       });
   }, []);
@@ -23,7 +23,7 @@ const HeaderCenterSectionWtyczka = () => {
   console.log(categoriesOptions)
 
   //wybranie kategorji z select
-  const [selectedCategory, setSelectedCategory] = useState({value: "", label: "All Categories"});
+  const [selectedCategory, setSelectedCategory] = useState();
 
   return (
     <div className="d-flex container justify-content-between align-items-center pt-4 pb-4">
@@ -44,6 +44,7 @@ const HeaderCenterSectionWtyczka = () => {
           value={selectedCategory}
           onChange={(value) => {setSelectedCategory(value)}}
           options={categoriesOptions}
+          placeholder="All Categories"
           styles={{
             control: (baseStyles, state) => ({
               ...baseStyles,
@@ -51,6 +52,12 @@ const HeaderCenterSectionWtyczka = () => {
               width: "270px",
               boxShadow: "none",
             }),
+            placeholder:  (baseStyles, state) => {
+              return {
+                ...baseStyles,
+                color: "#707070"
+              }
+            },
 
             option: (baseStyles, state) => {
               return {
