@@ -4,6 +4,8 @@ import { ReactComponent as CartIconCompare } from "../../../assets/img/compaire.
 import { ReactComponent as ArrowDownIcon } from "../../../assets/img/arrow-down.svg";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Input from "../../atoms/input/Input";
+import Image from "../../atoms/Image";
 
 const HeaderCenterSectionWtyczka = () => {
   //pobieranie danych z serwera
@@ -28,18 +30,11 @@ const HeaderCenterSectionWtyczka = () => {
   return (
     <div className="d-flex container justify-content-between align-items-center pt-4 pb-4">
       <a href="#">
-        <img src={Logo} />
+        <Image src={Logo} alt="Logo"/>
       </a>
-
       <form className="d-flex border border-primary align-items-center rounded-3">
-        <input
-          type="text"
-          className="form-control border-0 input-reset es-header-search-input"
-          placeholder="Search Product...."
-        />
-
+        <Input className="es-search-input" placeholder="Search Product...."/>
         <div className="es-divider"></div>
-
         <Select
           value={selectedCategory}
           onChange={(value) => {setSelectedCategory(value)}}

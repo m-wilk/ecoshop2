@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Select, { components } from "react-select";
-import { ReactComponent as ArrowDownIcon } from "../../../assets/img/arrow-down.svg";
-import { ReactComponent as ToogleMenuIcon } from "../../../assets/img/toogle-menu.svg";
-import { ReactComponent as ArrowRightIcon } from "../../../assets/img/arrow-right.svg";
 
 const HeaderBottomSectionWtyczka = () => {
   //pobieranie danych z serwera
@@ -31,30 +28,28 @@ const HeaderBottomSectionWtyczka = () => {
             <div className="d-flex align-items-center justify-content-center gap-4">
               <div className="d-flex align-items-center justify-content-between bg-white rounded-top  position-relative ">
                 <Select
-                  defaultMenuIsOpen={true}
+                  // defaultMenuIsOpen={false}
                   value={selectedCategory}
                   onChange={(value) => {
-                    console.log(value);
                     setSelectedCategory(value);
                   }}
                   placeholder="All Category"
                   options={categoriesOptions}
                   styles={{
-                    placeholder: (baseStyles, state) => ({
+                    placeholder: (baseStyles) => ({
                       ...baseStyles,
                       color: "black",
                     }),
-                    control: (baseStyles, state) => ({
+                    control: (baseStyles) => ({
                       ...baseStyles,
                       border: "none",
                       width: "270px",
                       boxShadow: "none",
                       padding: "10px",
                     }),
-                    option: (baseStyles, state) => ({
+                    option: (baseStyles) => ({
                       ...baseStyles,
                       padding: "10px",
-                      // borderBottom: "1px solid grey",
                       background: "white",
                       "&:hover": {
                         background: "green",
@@ -64,9 +59,14 @@ const HeaderBottomSectionWtyczka = () => {
                         borderBottom: "1px solid black",
                       },
                     }),
-                    menuList: (baseStyles, state) => ({
+                    menuList: (baseStyles) => ({
                       ...baseStyles,
                       padding: "0",
+                      boxShadow: "none",
+                    }),
+                    menu: (baseStyles) => ({
+                      ...baseStyles,
+                      boxShadow: " 1px 0px 12px -5px rgba(184, 184, 191, 1)",
                     }),
                   }}
                   components={{
@@ -75,20 +75,20 @@ const HeaderBottomSectionWtyczka = () => {
                       <span className="icon-arrow-down me-2"></span>
                     ),
                     Control: (props) => {
+                      console.log(props);
                       return (
                         <components.Control {...props}>
-                          <span className="icon-toogle-menu ms-2 me-3"></span>{" "}
+                          <span className="icon-toogle-menu ms-2 me-3"></span>
                           {props.children}
                         </components.Control>
                       );
                     },
                     Option: (props) => {
-                      console.log(props);
                       return (
                         <components.Option {...props}>
                           <div className="nav-item d-flex align-items-center justify-content-between">
                             <div className="d-flex align-items-center">
-                              <span class="icon-anchor ms-2 me-3"></span>
+                              <span className="icon-anchor ms-2 me-3"></span>
                               <a href="#" className="nav-link">
                                 {props.label}
                               </a>
@@ -101,10 +101,45 @@ const HeaderBottomSectionWtyczka = () => {
                   }}
                 />
               </div>
+              <ul className="nav">
+                <li className="nav-item">
+                  <a href="#" className="nav-link text-white fw-bold">
+                    Home
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="#" className="nav-link text-white fw-bold">
+                    Shop
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="#" className="nav-link text-white fw-bold">
+                    Pages
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="#" className="nav-link text-white fw-bold">
+                    About
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="#" className="nav-link text-white fw-bold">
+                    Blog
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="#" className="nav-link text-white fw-bold">
+                    User Dashboard
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="#" className="nav-link text-white fw-bold">
+                    Contact
+                  </a>
+                </li>
+              </ul>
             </div>
-            <a className="text-decoration-none rounded es-shop-btn">
-              Seller Login
-            </a>
+            <a href="#" className="text-decoration-none rounded es-shop-btn" >Seller Login</a>
           </div>
         </div>
       </div>

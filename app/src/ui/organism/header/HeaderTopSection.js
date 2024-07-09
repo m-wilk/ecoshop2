@@ -24,12 +24,12 @@ const HeaderTopSection = () => {
             </li>
           </ul>
           <div className="d-flex align-items-center gap-2">
-            <a className="nav-link text-decoration-none text-black me-2" href="#">
+            <a className="nav-link text-decoration-none text-black me-2" href="tel:123-456-7890">
               <Phone className="me-2" />
               +00645 4568
             </a>
             <div className="es-divider"></div>
-            <a className="nav-link text-decoration-none text-black ms-2" href="#">
+            <a className="nav-link text-decoration-none text-black ms-2" href="mailto:webmaster@example.com">
               <Email className="me-2" />
               +00645 4568
             </a>
