@@ -1,11 +1,9 @@
-import Select from "react-select";
 import Logo from "../../../assets/img/logo.png";
-import { ReactComponent as CartIconCompare } from "../../../assets/img/compaire.svg";
-import { ReactComponent as ArrowDownIcon } from "../../../assets/img/arrow-down.svg";
+import Badge from "../../molecules/badge/Badge";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Input from "../../atoms/input/Input";
-import Image from "../../atoms/Image";
+import Image from "../../atoms/imagine/Image";
+import SearchCategoriesProduct from "../../molecules/search-categories-product/SearchCategoriesProduct";
 
 const HeaderCenterSectionWtyczka = () => {
   //pobieranie danych z serwera
@@ -20,9 +18,9 @@ const HeaderCenterSectionWtyczka = () => {
   }, []);
 
   const categoriesOptions = categories.map((categorie) => {
-    return {value: categorie.id, label: categorie.name} 
-  })
-  console.log(categoriesOptions)
+    return { value: categorie.id, label: categorie.name };
+  });
+  console.log(categoriesOptions);
 
   //wybranie kategorji z select
   const [selectedCategory, setSelectedCategory] = useState();
@@ -30,74 +28,23 @@ const HeaderCenterSectionWtyczka = () => {
   return (
     <div className="d-flex container justify-content-between align-items-center pt-4 pb-4">
       <a href="#">
-        <Image src={Logo} alt="Logo"/>
+        <Image src={Logo} alt="Logo" />
       </a>
-      <form className="d-flex border border-primary align-items-center rounded-3">
-        <Input className="es-search-input" placeholder="Search Product...."/>
-        <div className="es-divider"></div>
-        <Select
-          value={selectedCategory}
-          onChange={(value) => {setSelectedCategory(value)}}
-          options={categoriesOptions}
-          placeholder="All Categories"
-          styles={{
-            control: (baseStyles, state) => ({
-              ...baseStyles,
-              border: "none",
-              width: "270px",
-              boxShadow: "none",
-            }),
-            placeholder:  (baseStyles, state) => {
-              return {
-                ...baseStyles,
-                color: "#707070"
-              }
-            },
-
-            option: (baseStyles, state) => {
-              return {
-                ...baseStyles,
-                background: "white",
-                "&:hover": {
-                  background: "#b7b7b7",
-                  color: "#fff",
-                },
-                "&:focus": {
-                  background: "#fff",
-                },
-              };
-            },
-          }}
-          components={{
-            IndicatorSeparator: () => null,
-            DropdownIndicator: () => (
-              <div className="pe-3">
-                <ArrowDownIcon />
-              </div>
-            ),
-          }}
-        />
-
-        <button
-          className="btn btn-primary text-white rounded-start-0"
-          type="submit"
-        >
-          Search
-        </button>
-      </form>
-
-      <div className="d-flex gap-4">
+      <SearchCategoriesProduct
+        selectedCategory={selectedCategory}
+        categoriesOptions={categoriesOptions}
+        setSelectedCategory={setSelectedCategory}
+      />
+      <div className="d-flex align-items-center gap-3">
+        <Badge className="icon-compaire" />
         <a href="#" className="nav-link">
-          <CartIconCompare />
+          <Badge className="icon-wishlist" />
         </a>
         <a href="#" className="nav-link">
-          <CartIconCompare />
+          <Badge className="icon-cart"/>
         </a>
         <a href="#" className="nav-link">
-          <CartIconCompare />
-        </a>
-        <a href="#" className="nav-link">
-          <CartIconCompare />
+          <span className="icon-user-profile"></span>
         </a>
       </div>
     </div>

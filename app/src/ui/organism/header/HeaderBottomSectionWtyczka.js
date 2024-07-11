@@ -51,6 +51,7 @@ const HeaderBottomSectionWtyczka = () => {
                       ...baseStyles,
                       padding: "10px",
                       background: "white",
+                      color: "black",
                       "&:hover": {
                         background: "green",
                         color: "#fff",
@@ -139,7 +140,7 @@ const HeaderBottomSectionWtyczka = () => {
                 </li>
               </ul>
             </div>
-            <a href="#" className="text-decoration-none rounded es-shop-btn" >Seller Login</a>
+            <a href="#" className="text-decoration-none rounded es-shop-btn">Seller Login</a>
           </div>
         </div>
       </div>
