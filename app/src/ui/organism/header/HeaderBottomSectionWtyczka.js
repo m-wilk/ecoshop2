@@ -140,7 +140,7 @@ const HeaderBottomSectionWtyczka = () => {
                 </li>
               </ul>
             </div>
-            <a href="#" className="text-decoration-none rounded es-shop-btn">Seller Login</a>
+            <a href="#" className="text-decoration-none rounded d-inline-block  es-shop-btn">Seller Login</a>
           </div>
         </div>
       </div>

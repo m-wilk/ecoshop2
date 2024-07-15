@@ -107,7 +107,7 @@ const HeaderBottomSection = () => {
                 </li>
               </ul>
             </div>
-            <a className="text-decoration-none rounded es-shop-btn">
+            <a className="text-decoration-none rounded d-inline-block  es-shop-btn">
               Seller Login
             </a>
           </div>
