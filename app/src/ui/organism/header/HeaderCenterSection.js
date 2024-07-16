@@ -49,7 +49,7 @@ const HeaderCenterSection = () => {
           <div className="es-divider"></div>
 
           <div
-            className="d-flex ps-3 position-relative align-items-center button-reset justify-content-between es-header-search-select pe-3"
+            className="d-flex ps-3 position-relative align-items-center button-reset justify-content-between es-w-250 pe-3"
             onClick={() => {
               setVisible(!visible);
             }}
@@ -63,14 +63,13 @@ const HeaderCenterSection = () => {
             </div>
 
             <ul
-              className={`nav d-flex w-100 flex-column bg-white position-absolute border rounded-3 es-header-search-dropdown-list z-3 ${popUp}`}
+              className={`nav d-flex w-100 flex-column bg-white position-absolute border rounded-3  es-header-search-dropdown-list z-3 ${popUp}`}
             >
               {categories.map((categorie) => {
                 return (
                   <li
                     onClick={() => {
                       setSelectedCategory(categorie);
-                      // setVisible(false);
                     }}
                     key={categorie.id}
                     className="nav-item"

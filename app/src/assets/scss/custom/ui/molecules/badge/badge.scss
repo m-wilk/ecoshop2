@@ -1,15 +1,8 @@
-.es-icon-position {
-  position: relative;
-  display: inline-block;
-}
 
-.es-icon-position .es-badge {
-  position: absolute;
+.es-badge {
   top: -4px;
   right: -5px;
   width: 18px;
   height: 18px;
-  border-radius: 50%;
   font-size: 0.7rem;
-  color: white;
 }

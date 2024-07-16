@@ -4,18 +4,18 @@ import HeroImg2 from "../../../assets/img/hero-img-2.png";
 import HeroImg3 from "../../../assets/img/hero-img-3.png";
 import Slider from "react-slick";
 
+const settings = {
+  dots: true,
+  fade: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  waitForAnimate: false,
+};
 const HeroSection = () => {
-  const settings = {
-    dots: true,
-    fade: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    waitForAnimate: false,
-  };
   return (
-    <div className="hero-section">
+    <div className="bg-hero">
       <div className="container">
         <Slider {...settings}>
           <div className="d-flex align-items-center slider-container">
@@ -32,9 +32,7 @@ const HeroSection = () => {
               </a>
             </div>
             <div className="hero-section-wrapper-img d-flex align-items-center">
-              <div>
                 <Image className="img-fluid" src={HeroImg1} />
-              </div>
             </div>
           </div>
           <div className="d-flex align-items-center slider-container">
@@ -51,9 +49,7 @@ const HeroSection = () => {
               </a>
             </div>
             <div className="hero-section-wrapper-img d-flex align-items-center">
-              <div>
                 <Image className="img-fluid" src={HeroImg2} />
-              </div>
             </div>
           </div>
           <div className="d-flex align-items-center slider-container">
@@ -62,7 +58,7 @@ const HeroSection = () => {
                 Fresh Grocery
               </span>
               <h1 className="league-spartan-bold es-h1-xl">
-                There's you can Buy your all of Grocery Products.
+                You Can Buy All the Grocery Items Hasslefree
               </h1>
               <a className="text-decoration-none rounded mt-2 mb-2 d-inline-block  es-shop-btn">
                 Shop Now
@@ -70,9 +66,7 @@ const HeroSection = () => {
               </a>
             </div>
             <div className="hero-section-wrapper-img d-flex align-items-center">
-              <div>
                 <Image className="img-fluid" src={HeroImg3} />
-              </div>
             </div>
           </div>
         </Slider>

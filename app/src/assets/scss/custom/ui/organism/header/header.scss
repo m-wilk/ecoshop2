@@ -10,18 +10,11 @@
   background: $es-gray-200;
 }
 
-.es-header-search-select {
-  width: 250px;
-}
 
 .es-header-search-dropdown-list {
   top: 32px;
   left: 0px;
   box-shadow: $es-contact-form-shadow;
-
-  a {
-    color: black;
-  }
   a:hover {
     background: $es-accent-color;
     color: #fff;
