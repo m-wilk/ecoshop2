@@ -1,12 +1,74 @@
 .es-header-top-section {
-     background: $es-green-100;
-     border-bottom: 1px solid $es-green-100;
-    .es-divider {
-        height: 16px;
-        width: 2px;
-        margin: 1rem;
-        background: $es-gray-200;
-      }
+  background: $es-green-100;
+  border-bottom: 1px solid $es-green-100;
+  padding: 0.6rem 0;
+}
+
+.es-divider {
+  height: 16px;
+  width: 2px;
+  background: $es-gray-200;
 }
 
 
+.es-header-search-dropdown-list {
+  top: 32px;
+  left: 0px;
+  box-shadow: $es-contact-form-shadow;
+  a:hover {
+    background: $es-accent-color;
+    color: #fff;
+  }
+}
+
+.es-shop-btn {
+  padding: 0.8rem 2rem;
+  background: $es-orange-300;
+  color: black;
+  margin: 0px;
+  text-align: center;
+  transition: ease-out;
+  transition-duration: 0.3s;
+  .icon-arrow-right {
+    transition: ease-out;
+    transition-duration: 0.3s;
+  }
+
+  &:hover {
+    box-shadow: inset 300px 0 0 0 black;
+    color: white;
+    .icon-arrow-right {
+      transform: translateX(5px);
+    }
+  }
+}
+
+.es-header-menu-dropdown-list {
+  top: 58px;
+  left: 0px;
+  box-shadow: $es-contact-form-shadow;
+  li {
+    border: 1px solid $es-gray-100;
+    a {
+      color: black;
+    }
+    &:hover {
+      background: $es-accent-color;
+      a {
+        color: #fff;
+      }
+      .fill-white-icon {
+        fill: white;
+      }
+    }
+  }
+}
+
+.es-hover-green:hover {
+  background: $es-accent-color;
+  color: white;
+}
+
+.es-search-input {
+  width: 170px;
+}

@@ -10,7 +10,7 @@ $es-gray-800: #707070;
 $es-gray-900: #444444;
 $es-white: #ffffff;
 $es-black: #000000;
-$es-contact-form-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+$es-contact-form-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
 //Wlasne zmienne - tekst
 $es-font-family-body: "Inter";
@@ -19,6 +19,8 @@ $es-font-family-secondary: "League Spartan";
 // Kolory Bootstrap
 $theme-colors: (
   "primary": $es-accent-color,
+  "secondary":  $es-gray-800,
+  
 );
 
 //tekst
