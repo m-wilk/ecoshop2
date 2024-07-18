@@ -7,7 +7,7 @@ import { ReactComponent as FreeShipping } from "../../../assets/img/free-shippin
 import { ReactComponent as FreeReturn } from "../../../assets/img/free-return.svg";
 import { ReactComponent as SecurePayment } from "../../../assets/img/secure-payment.svg";
 import { ReactComponent as BestQuality } from "../../../assets/img/best-quality.svg";
-
+import CustomLink from "../../atoms/custom-link/CustomLink";
 
 const settings = {
   dots: true,
@@ -31,13 +31,12 @@ const HeroSection = () => {
               <h1 className="league-spartan-bold es-h1-xl">
                 There's you can Buy your all of Grocery Products.
               </h1>
-              <a className="text-decoration-none rounded mt-2 mb-2 d-inline-block  es-shop-btn">
+              <CustomLink className="bg-warning" isArrow={true}>
                 Shop Now
-                <span className="ms-2 icon-arrow-right d-inline-block"></span>
-              </a>
+              </CustomLink>
             </div>
             <div className="hero-section-wrapper-img d-flex align-items-center">
-                <Image className="img-fluid" src={HeroImg1} />
+              <Image className="img-fluid" src={HeroImg1} />
             </div>
           </div>
           <div className="d-flex align-items-center slider-container">
@@ -48,13 +47,12 @@ const HeroSection = () => {
               <h1 className="league-spartan-bold es-h1-xl">
                 We Provide Fresh and Organic Fruits To Your Door.
               </h1>
-              <a className="text-decoration-none rounded mt-2 mb-2 d-inline-block  es-shop-btn">
+              <CustomLink className="bg-warning" isArrow={true}>
                 Shop Now
-                <span className="ms-2 icon-arrow-right d-inline-block"></span>
-              </a>
+              </CustomLink>
             </div>
             <div className="hero-section-wrapper-img d-flex align-items-center">
-                <Image className="img-fluid" src={HeroImg2} />
+              <Image className="img-fluid" src={HeroImg2} />
             </div>
           </div>
           <div className="d-flex align-items-center slider-container">
@@ -65,13 +63,12 @@ const HeroSection = () => {
               <h1 className="league-spartan-bold es-h1-xl">
                 You Can Buy All the Grocery Items Hasslefree
               </h1>
-              <a className="text-decoration-none rounded mt-2 mb-2 d-inline-block  es-shop-btn">
+              <CustomLink className="bg-warning" isArrow={true}>
                 Shop Now
-                <span className="ms-2 icon-arrow-right d-inline-block"></span>
-              </a>
+              </CustomLink>
             </div>
             <div className="hero-section-wrapper-img d-flex align-items-center">
-                <Image className="img-fluid" src={HeroImg3} />
+              <Image className="img-fluid" src={HeroImg3} />
             </div>
           </div>
         </Slider>
