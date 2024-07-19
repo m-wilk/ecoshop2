@@ -1,0 +1,16 @@
+.product-category-section {
+    padding: 7rem 0 8rem 0;
+    .category-section {
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        .es-wrapper-img {
+            background: $es-green-100;
+            border-color: $es-green-300;
+        }
+    }
+}
+.es-product-wrapper {
+    background: url("../../../../../img/c-bg-img-1.png") no-repeat center center;
+    background-size: cover;
+}

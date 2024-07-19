@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Select, { components } from "react-select";
+import CustomLink from "../../atoms/custom-link/CustomLink";
 
 const HeaderBottomSectionWtyczka = () => {
   //pobieranie danych z serwera
@@ -140,7 +141,7 @@ const HeaderBottomSectionWtyczka = () => {
                 </li>
               </ul>
             </div>
-            <a href="#" className="text-decoration-none rounded d-inline-block  es-shop-btn">Seller Login</a>
+            <CustomLink className="bg-warning">Seller Login</CustomLink>
           </div>
         </div>
       </div>

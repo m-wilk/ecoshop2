@@ -12,3 +12,31 @@
 .es-w-250 {
   width: 250px;
 }
+
+.es-underline-hover::after {
+content: "";
+position: absolute;
+width: 0;
+height: 2px;
+bottom: 0;
+left: 0;
+background-color: black;
+transition: width 0.3s ease-out;
+}
+
+.es-underline-hover:hover::after {
+  width: 100%;
+}
+
+.es-h-9 {
+  height: 9rem;
+}
+
+.es-fs-inscription {
+  font-size: 1.2rem;
+}
+
+.es-pt-6 {
+  padding-top: 6rem;
+}
+
