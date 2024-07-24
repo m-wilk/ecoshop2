@@ -1,7 +1,7 @@
 // Własne zmienne - kolory
 $es-accent-color: #34a853;
-$es-green-100: rgba(52, 168, 83, 0.06);
-$es-green-300: rgba(52, 168, 83, 0.2);
+$es-green-100: rgb(245 250 245);
+$es-green-300: rgb(209 234 216);
 $es-orange-300: #ffbb38;
 $es-gray-100: #f8f8f8f8;
 $es-gray-200: #eeeeee;
@@ -10,17 +10,21 @@ $es-gray-800: #707070;
 $es-gray-900: #444444;
 $es-white: #ffffff;
 $es-black: #000000;
+$red: #dc3545;
 $es-contact-form-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
 //Wlasne zmienne - tekst
 $es-font-family-body: "Inter";
 $es-font-family-secondary: "League Spartan";
 
+$box-shadow-lg: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
 // Kolory Bootstrap
 $theme-colors: (
   "primary": $es-accent-color,
-  "secondary":  $es-gray-800,
-  "warning" : $es-orange-300
+  "secondary": $es-gray-800,
+  "warning": $es-orange-300,
+  "danger": $red,
 );
 
 //tekst

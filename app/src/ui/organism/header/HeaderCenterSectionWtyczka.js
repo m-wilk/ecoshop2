@@ -37,15 +37,9 @@ const HeaderCenterSectionWtyczka = () => {
       />
       <div className="d-flex align-items-center gap-3">
         <Badge className="icon-compaire" />
-        <a href="#" className="nav-link">
-          <Badge className="icon-wishlist" />
-        </a>
-        <a href="#" className="nav-link">
-          <Badge className="icon-cart"/>
-        </a>
-        <a href="#" className="nav-link">
-          <span className="icon-user-profile"></span>
-        </a>
+        <Badge className="icon-wishlist" />
+        <Badge className="icon-cart" />
+        <span className="icon-user-profile"></span>
       </div>
     </div>
   );

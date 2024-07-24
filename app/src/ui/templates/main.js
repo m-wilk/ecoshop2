@@ -5,6 +5,7 @@ import HeaderBottomSection from "../organism/header/HeaderBottomSection";
 import HeaderBottomSectionWtyczka from "../organism/header/HeaderBottomSectionWtyczka";
 import HeroSection from "../organism/hero-section/HeroSection";
 import ProductCategory from "../organism/product-category/ProductCategory";
+import ProductFresh from "../organism/product-fresh/ProductFresh";
 
 
 const Main = () => {
@@ -15,6 +16,7 @@ const Main = () => {
       <HeaderBottomSectionWtyczka />
       <HeroSection />
       <ProductCategory />
+      <ProductFresh />
       {/* <HeaderBottomSection /> */}
       {/* <HeaderBottomSection /> */}
       {/* <HeaderCenterSection /> */}

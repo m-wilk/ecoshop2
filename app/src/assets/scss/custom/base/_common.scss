@@ -40,3 +40,16 @@ transition: width 0.3s ease-out;
   padding-top: 6rem;
 }
 
+.es-bg-purple {
+  background: $purple-400;
+}
+
+.es-bg-green-300 {
+  background: $es-green-300;
+}
+
+.es-hover-green:hover {
+  background: $es-accent-color;
+  color: white;
+}
+
