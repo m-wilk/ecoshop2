@@ -77,52 +77,47 @@ const ProductCategory = () => {
             </a>
           </div>
         </div>
-        <div className="es-pt-6">
-          <div className="row gy-4">
-            <div className="col-lg-4 col-md-6">
-              <div className="es-product-wrapper pb-4">
-                <div className="ps-4 pt-4">
-                  <span className="text-uppercase d-block mb-2">Fruits</span>
-                  <h2 className="fw-bold m-0 pb-3">
-                    Healthy &amp; Goods <br /> Fruits
-                  </h2>
-                  <CustomLink className="bg-primary text-white" isArrow={true}>
-                    Shop Now
-                  </CustomLink>
-                </div>
-                <Image className="w-100" src={CateroryShop1} />
+        <div className="es-pt-6 row gy-4">
+          <div className="col-lg-4 col-md-6">
+            <div className="es-product-wrapper pb-4">
+              <div className="ps-4 pt-4">
+                <span className="text-uppercase d-block mb-2">Fruits</span>
+                <h2 className="fw-bold m-0 pb-3">
+                  Healthy &amp; Goods <br /> Fruits
+                </h2>
+                <CustomLink className="bg-primary text-white" isArrow={true}>
+                  Shop Now
+                </CustomLink>
+              </div>
+              <Image className="w-100" src={CateroryShop1} />
+            </div>
+          </div>
+          <div className="col-lg-4 col-md-6">
+            <div className="es-product-wrapper pb-4">
+              <Image className="w-100" src={CateroryShop1} />
+              <div className="ps-4 pt-4">
+                <span className="text-uppercase d-block mb-2">Fruits</span>
+                <h2 className="fw-bold m-0 pb-3">
+                  Healthy &amp; Goods <br /> Fruits
+                </h2>
+                <CustomLink className="bg-danger text-white" isArrow={true}>
+                  Shop Now
+                </CustomLink>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="es-product-wrapper pb-4">
-                <Image className="w-100" src={CateroryShop1} />
-                <div className="ps-4 pt-4">
-                  <span className="text-uppercase d-block mb-2">Fruits</span>
-                  <h2 className="fw-bold m-0 pb-3">
-                    Healthy &amp; Goods <br /> Fruits
-                  </h2>
-                  <CustomLink className="bg-danger text-white" isArrow={true}>
-                    Shop Now
-                  </CustomLink>
-                </div>
+          </div>
+          <div className="col-lg-4 col-md-6">
+            <div className="es-product-wrapper pb-4">
+              <div className="ps-4 pt-4">
+                <span className="text-uppercase d-block mb-2">Fruits</span>
+                <h2 className="fw-bold m-0 pb-3">
+                  Healthy &amp; Goods <br /> Fruits
+                </h2>
+                <CustomLink className="es-bg-purple text-white" isArrow={true}>
+                  Shop Now
+                </CustomLink>
               </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="es-product-wrapper pb-4">
-                <div className="ps-4 pt-4">
-                  <span className="text-uppercase d-block mb-2">Fruits</span>
-                  <h2 className="fw-bold m-0 pb-3">
-                    Healthy &amp; Goods <br /> Fruits
-                  </h2>
-                  <CustomLink
-                    className="es-bg-purple text-white"
-                    isArrow={true}
-                  >
-                    Shop Now
-                  </CustomLink>
-                </div>
-                <Image className="w-100" src={CateroryShop1} />
-              </div>
+              <Image className="w-100" src={CateroryShop1} />
             </div>
           </div>
         </div>
