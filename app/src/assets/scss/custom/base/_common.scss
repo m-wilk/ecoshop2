@@ -14,14 +14,14 @@
 }
 
 .es-underline-hover::after {
-content: "";
-position: absolute;
-width: 0;
-height: 2px;
-bottom: 0;
-left: 0;
-background-color: black;
-transition: width 0.3s ease-out;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transition: width 0.3s ease-out;
 }
 
 .es-underline-hover:hover::after {
@@ -30,6 +30,10 @@ transition: width 0.3s ease-out;
 
 .es-h-9 {
   height: 9rem;
+}
+
+.es-h-4 {
+  font-size: 4rem;
 }
 
 .es-fs-inscription {
@@ -53,3 +57,12 @@ transition: width 0.3s ease-out;
   color: white;
 }
 
+.es-circle-big {
+  width: 9rem;
+  height: 9rem;
+}
+
+.es-circle-small {
+  width: 5rem;
+  height: 5rem;
+}
