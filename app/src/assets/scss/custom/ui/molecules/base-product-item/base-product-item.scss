@@ -9,10 +9,10 @@
       opacity: 1;
       visibility: visible;
       right: 1rem;
-      top: 1rem;
     }
   }
 }
+
 .es-product-cart-hiden-link {
   transition: all 0.4s;
   position: absolute;
@@ -20,4 +20,21 @@
   visibility: hidden;
   right: 0;
   top: 1rem;
+}
+
+// horiontal 
+
+.es-horizontal.es-product-base-item-wrapper {
+  &:hover {
+    .es-product-cart-hiden-link {
+      left: 1rem;
+      right: auto;
+      
+    }
+  }
+  .es-product-cart-hiden-link {
+    left: 0;
+    right: auto;
+  }
+  
 }
