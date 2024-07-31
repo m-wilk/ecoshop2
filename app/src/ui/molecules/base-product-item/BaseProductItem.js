@@ -1,15 +1,15 @@
 import Image from "../../../ui/atoms/imagine/Image";
 import Tomatos from "../../../assets/img/p-img-1.png";
 
-const BaseProductItem = () => {
+const BaseProductItem = ({isHorizontal=false}) => {
   return (
-    <div className="pb-3 rounded-1 shadow-lg bg-white position-relative es-product-base-item-wrapper">
+    <div className={`pb-3 rounded-1 shadow-lg bg-white position-relative es-product-base-item-wrapper ${isHorizontal ? "d-flex es-horizontal": ""}`}>
       <div className="d-flex justify-content-center align-items-center pt-4 pb-4">
-        <Image src={Tomatos} />
+        <Image src={Tomatos} className="img-fluid"/>
         <div className="d-flex flex-column gap-3 es-product-cart-hiden-link">
           <a
             href="#"
-            className="nav-link rounded  es-bg-green-300 p-2 es-hover-green"
+            className="nav-link rounded es-bg-green-300 p-2 es-hover-green"
           >
             <span className="icon-wishlist"></span>
           </a>
@@ -27,8 +27,8 @@ const BaseProductItem = () => {
           </a>
         </div>
       </div>
-      <div className="d-flex flex-column justify-content-center align-items-center pb-3 ps-3 pe-3">
-        <div className="d-flex justify-content-center align-items-center mb-2 mt-2">
+      <div className={`${isHorizontal ? "" : "d-flex flex-column align-items-center"}  pb-3 ps-3 pe-3`}>
+        <div className="mb-2 mt-2">
           <span className="icon-star-full text-warning"></span>
           <span className="icon-star-full text-warning"></span>
           <span className="icon-star-full text-warning"></span>

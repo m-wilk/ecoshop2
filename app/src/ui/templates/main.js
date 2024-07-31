@@ -7,6 +7,7 @@ import HeroSection from "../organism/hero-section/HeroSection";
 import ProductCategory from "../organism/product-category/ProductCategory";
 import ProductFresh from "../organism/product-fresh/ProductFresh";
 import FleshSale from "../organism/flesh-sale/FleshSale";
+import TopSellingProducts from "../organism/top-selling-products/TopSellingProducts";
 
 
 const Main = () => {
@@ -19,6 +20,7 @@ const Main = () => {
       <ProductCategory />
       <ProductFresh />
       <FleshSale />
+      <TopSellingProducts />
       {/* <HeaderBottomSection /> */}
       {/* <HeaderBottomSection /> */}
       {/* <HeaderCenterSection /> */}
