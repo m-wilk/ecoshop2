@@ -5,10 +5,10 @@ import HeaderBottomSection from "../organism/header/HeaderBottomSection";
 import HeaderBottomSectionWtyczka from "../organism/header/HeaderBottomSectionWtyczka";
 import HeroSection from "../organism/hero-section/HeroSection";
 import ProductCategory from "../organism/product-category/ProductCategory";
-import ProductFresh from "../organism/product-fresh/ProductFresh";
+import ProductSectionDivider from "../organism/product-section-divider/ProductSectionDivider";
 import FleshSale from "../organism/flesh-sale/FleshSale";
 import TopSellingProducts from "../organism/top-selling-products/TopSellingProducts";
-
+import BestProduct from "../organism/best-product/BestProduct";
 
 const Main = () => {
   return (
@@ -18,9 +18,11 @@ const Main = () => {
       <HeaderBottomSectionWtyczka />
       <HeroSection />
       <ProductCategory />
-      <ProductFresh />
+      <ProductSectionDivider title="Fresh Vegetables" />
       <FleshSale />
       <TopSellingProducts />
+      <ProductSectionDivider title="Drinks Juice" />
+      <BestProduct />
       {/* <HeaderBottomSection /> */}
       {/* <HeaderBottomSection /> */}
       {/* <HeaderCenterSection /> */}
