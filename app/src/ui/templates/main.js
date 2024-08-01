@@ -23,6 +23,7 @@ const Main = () => {
       <TopSellingProducts />
       <ProductSectionDivider title="Drinks Juice" />
       <BestProduct />
+      <ProductSectionDivider title="New Arrivals" />
       {/* <HeaderBottomSection /> */}
       {/* <HeaderBottomSection /> */}
       {/* <HeaderCenterSection /> */}
