@@ -1,8 +1,8 @@
 import SectionTitle from "../../molecules/section-title/SectionTitle";
 import BaseProductItem from "../../molecules/base-product-item/BaseProductItem";
 
-const ProductSectionDivider = ({title}) => (
-  <div className="es-product-fresh pt-5 pb-5">
+const ProductSectionDivider = ({title, background}) => (
+  <div className={`pt-5 pb-5 ${background}`}>
     <div className="container">
       <SectionTitle title={title} />
       <div className="row">

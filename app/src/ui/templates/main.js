@@ -9,6 +9,9 @@ import ProductSectionDivider from "../organism/product-section-divider/ProductSe
 import FleshSale from "../organism/flesh-sale/FleshSale";
 import TopSellingProducts from "../organism/top-selling-products/TopSellingProducts";
 import BestProduct from "../organism/best-product/BestProduct";
+import ModernGroceryBanner from "../organism/modern-grocery-banner/ModernGroceryBanner"; 
+
+
 
 const Main = () => {
   return (
@@ -18,12 +21,13 @@ const Main = () => {
       <HeaderBottomSectionWtyczka />
       <HeroSection />
       <ProductCategory />
-      <ProductSectionDivider title="Fresh Vegetables" />
+      <ProductSectionDivider title="Fresh Vegetables" background="es-product-background"/>
       <FleshSale />
       <TopSellingProducts />
-      <ProductSectionDivider title="Drinks Juice" />
+      <ProductSectionDivider title="Drinks Juice" background="es-product-background"/>
       <BestProduct />
-      <ProductSectionDivider title="New Arrivals" />
+      <ProductSectionDivider title="New Arrivals" background="es-product-background"/>
+      <ModernGroceryBanner background="es-product-background"/>
       {/* <HeaderBottomSection /> */}
       {/* <HeaderBottomSection /> */}
       {/* <HeaderCenterSection /> */}
