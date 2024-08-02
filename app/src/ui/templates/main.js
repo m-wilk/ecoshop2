@@ -10,6 +10,7 @@ import FleshSale from "../organism/flesh-sale/FleshSale";
 import TopSellingProducts from "../organism/top-selling-products/TopSellingProducts";
 import BestProduct from "../organism/best-product/BestProduct";
 import ModernGroceryBanner from "../organism/modern-grocery-banner/ModernGroceryBanner"; 
+import PopularSales from "../organism/popular-sales/PopularSales";
 
 
 
@@ -28,6 +29,7 @@ const Main = () => {
       <BestProduct />
       <ProductSectionDivider title="New Arrivals" background="es-product-background"/>
       <ModernGroceryBanner background="es-product-background"/>
+      <PopularSales />
       {/* <HeaderBottomSection /> */}
       {/* <HeaderBottomSection /> */}
       {/* <HeaderCenterSection /> */}
