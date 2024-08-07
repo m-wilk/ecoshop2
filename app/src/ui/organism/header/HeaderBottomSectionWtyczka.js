@@ -74,13 +74,13 @@ const HeaderBottomSectionWtyczka = () => {
                   components={{
                     IndicatorSeparator: () => null,
                     DropdownIndicator: () => (
-                      <span className="icon-arrow-down me-2"></span>
+                      <span className="icon-arrow-down es-fs-07 me-2"></span>
                     ),
                     Control: (props) => {
                       console.log(props);
                       return (
                         <components.Control {...props}>
-                          <span className="icon-toogle-menu ms-2 me-3"></span>
+                          <span className="icon-toogle-menu es-fs-07 ms-2 me-3"></span>
                           {props.children}
                         </components.Control>
                       );
@@ -90,12 +90,12 @@ const HeaderBottomSectionWtyczka = () => {
                         <components.Option {...props}>
                           <div className="nav-item d-flex align-items-center justify-content-between">
                             <div className="d-flex align-items-center">
-                              <span className="icon-anchor ms-2 me-3"></span>
+                              <span className="icon-anchor es-fs-1 ms-2 me-3"></span>
                               <a href="#" className="nav-link">
                                 {props.label}
                               </a>
                             </div>
-                            <span className="icon-arrow-right me-2"></span>
+                            <span className="icon-arrow-right es-fs-07 me-2"></span>
                           </div>
                         </components.Option>
                       );

@@ -48,7 +48,7 @@ const SearchCategoriesProduct = (props) => {
             IndicatorSeparator: () => null,
             DropdownIndicator: () => (
               <div className="pe-3">
-                <span className="icon-arrow-down"></span>
+                <span className="icon-arrow-down es-fs-07"></span>
               </div>
             ),
           }}
