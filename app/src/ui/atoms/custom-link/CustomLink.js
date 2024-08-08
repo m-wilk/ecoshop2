@@ -5,7 +5,7 @@ const CustomLink = ({ className, children, isArrow }) => {
     >
       {children}
       {isArrow && (
-        <span className="ms-2 icon-arrow-right d-inline-block"></span>
+        <span className="ms-2 icon-arrow-right es-fs-07 d-inline-block"></span>
       )}
     </a>
   );

@@ -11,6 +11,8 @@ import TopSellingProducts from "../organism/top-selling-products/TopSellingProdu
 import BestProduct from "../organism/best-product/BestProduct";
 import ModernGroceryBanner from "../organism/modern-grocery-banner/ModernGroceryBanner"; 
 import PopularSales from "../organism/popular-sales/PopularSales";
+import Newsletter from "../organism/newsletter/Newsletter";
+import Footer from "../organism/footer/Footer";
 
 
 
@@ -30,6 +32,8 @@ const Main = () => {
       <ProductSectionDivider title="New Arrivals" background="es-product-background"/>
       <ModernGroceryBanner background="es-product-background"/>
       <PopularSales />
+      <Newsletter />
+      <Footer />
       {/* <HeaderBottomSection /> */}
       {/* <HeaderBottomSection /> */}
       {/* <HeaderCenterSection /> */}

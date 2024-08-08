@@ -78,3 +78,24 @@
   background: url("../../../img/vegetable.png") no-repeat center center;
   background-size: cover;
 }
+
+.bw-bg {
+  background-image: linear-gradient(to bottom, white 50%, black 50%);
+}
+
+.es-fs-1 {
+  font-size: 1rem;
+}
+
+.es-fs-07 {
+  font-size: 0.7rem;
+}
+
+.es-fs-13 {
+  font-size: 1.3rem;
+}
+
+.es-size-box-45px {
+  width: 45px;
+  height: 45px;
+}

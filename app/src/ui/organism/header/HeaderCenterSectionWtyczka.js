@@ -36,10 +36,10 @@ const HeaderCenterSectionWtyczka = () => {
         setSelectedCategory={setSelectedCategory}
       />
       <div className="d-flex align-items-center gap-3">
-        <Badge className="icon-compaire" />
-        <Badge className="icon-wishlist" />
-        <Badge className="icon-cart" />
-        <span className="icon-user-profile"></span>
+        <Badge className="icon-compaire es-fs-13" />
+        <Badge className="icon-wishlist es-fs-13" />
+        <Badge className="icon-cart es-fs-13" />
+        <span className="icon-user-profile es-fs-13"></span>
       </div>
     </div>
   );

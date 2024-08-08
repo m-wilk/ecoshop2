@@ -11,19 +11,19 @@ const BaseProductItem = ({isHorizontal=false}) => {
             href="#"
             className="nav-link rounded es-bg-green-300 p-2 es-hover-green"
           >
-            <span className="icon-wishlist"></span>
+            <span className="icon-wishlist es-fs-13"></span>
           </a>
           <a
             href="#"
             className="nav-link rounded es-bg-green-300 p-2 es-hover-green"
           >
-            <span className="icon-wishlist"></span>
+            <span className="icon-wishlist es-fs-13"></span>
           </a>
           <a
             href="#"
             className="nav-link rounded es-bg-green-300 p-2 es-hover-green"
           >
-            <span className="icon-wishlist"></span>
+            <span className="icon-wishlist es-fs-13"></span>
           </a>
         </div>
       </div>
