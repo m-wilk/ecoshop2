@@ -1,7 +1,7 @@
 const Newsletter = () => {
   return (
     <div className="bw-bg pb-5">
-      <div className="d-flex align-items-center justify-content-center footer-top">
+      <div className="d-flex align-items-center justify-content-center newslatter-bg">
         <div className="container">
           <div className="row">
             <div className="col-lg-5"></div>

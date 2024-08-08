@@ -88,7 +88,7 @@ const Footer = () => {
           <div className="col-lg-3 col-sm-6">
             <h4 className="text-white fw-bold mb-3">Contact Info</h4>
             <div className="d-flex align-items-start gap-4">
-              <div className="d-flex justify-content-center align-items-center border rounded-circle es-size-box">
+              <div className="d-flex justify-content-center align-items-center border rounded-circle es-size-box-45px">
                 <span className="icon-location text-white"></span>
               </div>
               <div>
@@ -97,7 +97,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="d-flex align-items-start gap-4">
-              <div className="d-flex justify-content-center align-items-center border rounded-circle es-size-box">
+              <div className="d-flex justify-content-center align-items-center border rounded-circle es-size-box-45px">
                 <span className="icon-phone1 text-white"></span>
               </div>
               <div>
@@ -106,7 +106,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="d-flex align-items-start gap-4">
-              <div className="d-flex justify-content-center align-items-center border rounded-circle es-size-box">
+              <div className="d-flex justify-content-center align-items-center border rounded-circle es-size-box-45px">
                 <span className="icon-envelop text-white"></span>
               </div>
               <div>
