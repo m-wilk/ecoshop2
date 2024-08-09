@@ -1,31 +1,38 @@
 import SectionTitle from "../../molecules/section-title/SectionTitle";
 import BaseProductIten from "../../molecules/base-product-item/BaseProductItem";
 import ProductCategoryBanner from "../../molecules/product-category-banner/ProductCategoryBanner";
+import ScrollReveal from "../../molecules/scroll-reveal/ScrollReveal";
 
 const TopSellingProducts = () => {
   return (
     <div className="pt-5 pb-5 container">
       <SectionTitle title={"Top Selling Prodcuts"} />
-      <div className="row gy-4">
-        <div className="col-lg-4 col-sm-6">
-          <BaseProductIten isHorizontal={true} />
+      <ScrollReveal>
+        <div className="row mb-4">
+          <div className="col-lg-4 col-sm-6">
+            <BaseProductIten isHorizontal={true} />
+          </div>
+          <div className="col-lg-4 col-sm-6">
+            <BaseProductIten isHorizontal={true} />
+          </div>
+          <div className="col-lg-4 col-sm-6">
+            <BaseProductIten isHorizontal={true} />
+          </div>
         </div>
-        <div className="col-lg-4 col-sm-6">
-          <BaseProductIten isHorizontal={true} />
+      </ScrollReveal>
+      <ScrollReveal>
+        <div className="row">
+          <div className="col-lg-4 col-sm-6">
+            <BaseProductIten isHorizontal={true} />
+          </div>
+          <div className="col-lg-4 col-sm-6">
+            <BaseProductIten isHorizontal={true} />
+          </div>
+          <div className="col-lg-4 col-sm-6">
+            <BaseProductIten isHorizontal={true} />
+          </div>
         </div>
-        <div className="col-lg-4 col-sm-6">
-          <BaseProductIten isHorizontal={true} />
-        </div>
-        <div className="col-lg-4 col-sm-6">
-          <BaseProductIten isHorizontal={true} />
-        </div>
-        <div className="col-lg-4 col-sm-6">
-          <BaseProductIten isHorizontal={true} />
-        </div>
-        <div className="col-lg-4 col-sm-6">
-          <BaseProductIten isHorizontal={true} />
-        </div>
-      </div>
+      </ScrollReveal>
       <div className="pt-5 row">
         <div className="col-md-6">
           <ProductCategoryBanner
@@ -59,3 +66,4 @@ const TopSellingProducts = () => {
 };
 
 export default TopSellingProducts;
+

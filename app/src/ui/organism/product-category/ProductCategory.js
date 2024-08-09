@@ -3,14 +3,16 @@ import Category1 from "../../../assets/img/c-img-1.png";
 import CustomLink from "../../atoms/custom-link/CustomLink";
 import CateroryShop1 from "../../../assets/img/c-shop-img-1.png";
 import SectionTitle from "../../molecules/section-title/SectionTitle";
+import ScrollReveal from "../../molecules/scroll-reveal/ScrollReveal";
 
 const ProductCategory = () => {
   return (
     <div className="product-category-section">
       <div className="container">
         <SectionTitle title="Market Category" />
+        <ScrollReveal origin="start">
         <div className="category-section">
-          <div className="d-flex flex-column align-items-center gap-2">
+          <div className="d-flex flex-column align-items-center gap-4">
             <div className="d-flex justify-content-center align-items-center rounded-2 w-100 es-h-9 border border-1 es-wrapper-img">
               <Image className="img-fluid" src={Category1} />
             </div>
@@ -21,7 +23,7 @@ const ProductCategory = () => {
               Fruits
             </a>
           </div>
-          <div className="d-flex flex-column align-items-center gap-2">
+          <div className="d-flex flex-column align-items-center gap-4">
             <div className="d-flex justify-content-center align-items-center rounded-2 w-100 es-h-9 border border-1 es-wrapper-img">
               <Image className="img-fluid" src={Category1} />
             </div>
@@ -32,7 +34,7 @@ const ProductCategory = () => {
               Fruits
             </a>
           </div>
-          <div className="d-flex flex-column align-items-center gap-2">
+          <div className="d-flex flex-column align-items-center gap-4">
             <div className="d-flex justify-content-center align-items-center rounded-2 w-100 es-h-9 border border-1 es-wrapper-img">
               <Image className="img-fluid" src={Category1} />
             </div>
@@ -43,7 +45,7 @@ const ProductCategory = () => {
               Fruits
             </a>
           </div>
-          <div className="d-flex flex-column align-items-center gap-2">
+          <div className="d-flex flex-column align-items-center gap-4">
             <div className="d-flex justify-content-center align-items-center rounded-2 w-100 es-h-9 border border-1 es-wrapper-img">
               <Image className="img-fluid" src={Category1} />
             </div>
@@ -54,7 +56,7 @@ const ProductCategory = () => {
               Fruits
             </a>
           </div>
-          <div className="d-flex flex-column align-items-center gap-2">
+          <div className="d-flex flex-column align-items-center gap-4">
             <div className="d-flex justify-content-center align-items-center rounded-2 w-100 es-h-9 border border-1 es-wrapper-img">
               <Image className="img-fluid" src={Category1} />
             </div>
@@ -65,7 +67,7 @@ const ProductCategory = () => {
               Fruits
             </a>
           </div>
-          <div className="d-flex flex-column align-items-center gap-2">
+          <div className="d-flex flex-column align-items-center gap-4">
             <div className="d-flex justify-content-center align-items-center rounded-2 w-100 es-h-9 border border-1 es-wrapper-img">
               <Image className="img-fluid" src={Category1} />
             </div>
@@ -77,7 +79,9 @@ const ProductCategory = () => {
             </a>
           </div>
         </div>
-        <div className="es-pt-6 row gy-4">
+        </ScrollReveal>
+        <ScrollReveal>
+        <div className="pt-5 row gy-4">
           <div className="col-lg-4 col-md-6">
             <div className="es-product-wrapper pb-4">
               <div className="ps-4 pt-4">
@@ -121,6 +125,8 @@ const ProductCategory = () => {
             </div>
           </div>
         </div>
+        </ScrollReveal>
+       
       </div>
     </div>
   );
