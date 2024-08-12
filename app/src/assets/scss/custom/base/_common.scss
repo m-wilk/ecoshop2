@@ -95,3 +95,15 @@
   width: 45px;
   height: 45px;
 }
+
+
+.form-check-input:focus {
+  box-shadow: none;
+}
+
+
+.form-check-input[type=checkbox]:active, .form-check-input[type=checkbox]:checked {
+  border-radius: 0;
+  border: none;
+
+}

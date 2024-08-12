@@ -1,8 +1,8 @@
-const List = ({ items }) => {
+const List = ({ items, liClassName = 'mb-3' }) => {
   return (
     <ul className="list-unstyled">
       {items.map((item) => (
-        <li className="mb-3">
+        <li className={liClassName}>
           {item}
         </li>
       ))}

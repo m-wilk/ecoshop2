@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Select, { components } from "react-select";
 import CustomLink from "../../atoms/custom-link/CustomLink";
+import { Link } from "react-router-dom"
 
 const HeaderBottomSectionWtyczka = () => {
   //pobieranie danych z serwera
@@ -105,14 +106,15 @@ const HeaderBottomSectionWtyczka = () => {
               </div>
               <ul className="nav">
                 <li className="nav-item">
-                  <a href="#" className="nav-link text-white fw-bold">
+                  <Link to="/" className="nav-link text-white fw-bold">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a href="#" className="nav-link text-white fw-bold">
+                  
+                  <Link to="/shop" className="nav-link text-white fw-bold">
                     Shop
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
                   <a href="#" className="nav-link text-white fw-bold">
