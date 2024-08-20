@@ -1,7 +1,12 @@
-const CustomLink = ({ className, children, isArrow }) => {
+const CustomLink = ({
+  className,
+  children,
+  isArrow,
+  animationClassName = "es-shop-btn",
+}) => {
   return (
     <a
-      className={`text-decoration-none rounded d-inline-block es-shop-btn ${className}`}
+      className={`text-decoration-none rounded d-inline-block ${animationClassName} ${className}`}
     >
       {children}
       {isArrow && (
