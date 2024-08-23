@@ -6,9 +6,10 @@ import { useEffect } from "react";
 import axios from "axios";
 import Select, { components } from "react-select";
 import BaseProductItem from "../../molecules/base-product-item/BaseProductItem";
+import { useSearchParams } from "react-router-dom";
 import ShopBanner from "../../organism/shop-banner/ShopBanner";
 
-
+// dane do sidebara list
 const dataFromBackend = [
   {
     id: 1,
@@ -63,7 +64,11 @@ const Shop = (props) => {
   const [values, setValues] = useState([0, 100]);
   const [fromValue, toValue] = values;
 
-  //pobieranie danych z serwera
+  // useSearchParams
+  const [searchParams, setSearchParams] = useSearchParams();
+  const queryParamCategory = searchParams.get("category");
+
+  //pobieranie danych z serwera do sort by
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     axios
@@ -72,6 +77,19 @@ const Shop = (props) => {
         setCategories(respons.data);
       });
   }, []);
+
+  //pobieranie danych z serwera do produktów
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    let url = "http://localhost:8100/api/v1/products/";
+    if (queryParamCategory && queryParamCategory !== "0") {
+      url += `?category=${queryParamCategory}`;
+    }
+    axios.get(url).then((response) => {
+      setProducts(response.data);
+      console.log(response.data);
+    });
+  }, [queryParamCategory]);
 
   const categoriesOptions = categories.map((categorie) => {
     return { value: categorie.id, label: categorie.name };
@@ -224,63 +242,19 @@ const Shop = (props) => {
             </div>
           </div>
           <div className="row mt-5">
-            <div className="col-xl-4 col-sm-6">
-              <BaseProductItem />
-            </div>
-            <div className="col-xl-4 col-sm-6">
-              <BaseProductItem />
-            </div>
-            <div className="col-xl-4 col-sm-6">
-              <BaseProductItem />
-            </div>
+            {products.map((product) => (
+              <div className="col-xl-4 col-sm-6">
+                <BaseProductItem />
+              </div>
+            ))}
           </div>
-          <div className="row mt-4">
-            <div className="col-xl-4 col-sm-6">
-              <BaseProductItem />
-            </div>
-            <div className="col-xl-4 col-sm-6">
-              <BaseProductItem />
-            </div>
-            <div className="col-xl-4 col-sm-6">
-              <BaseProductItem />
-            </div>
-          </div>
-          <div className="row mt-4">
+          <div className="row">
             <div className="col-lg-12">
-            <ShopBanner />
-            </div>
-          </div>
-          <div className="row mt-4">
-            <div className="col-xl-4 col-sm-6">
-              <BaseProductItem />
-            </div>
-            <div className="col-xl-4 col-sm-6">
-              <BaseProductItem />
-            </div>
-            <div className="col-xl-4 col-sm-6">
-              <BaseProductItem />
-            </div>
-          </div>
-          <div className="row mt-4">
-            <div className="col-xl-4 col-sm-6">
-              <BaseProductItem />
-            </div>
-            <div className="col-xl-4 col-sm-6">
-              <BaseProductItem />
-            </div>
-            <div className="col-xl-4 col-sm-6">
-              <BaseProductItem />
-            </div>
-          </div>
-          <div className="row mt-4">
-            <div className="col-xl-4 col-sm-6">
-              <BaseProductItem />
-            </div>
-            <div className="col-xl-4 col-sm-6">
-              <BaseProductItem />
-            </div>
-            <div className="col-xl-4 col-sm-6">
-              <BaseProductItem />
+              <div className="mt-4">
+                <div className="es-shop-banner-bg rounded-1">
+                  <ShopBanner/>
+                </div>
+              </div>
             </div>
           </div>
         </div>
