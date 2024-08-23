@@ -5,6 +5,7 @@ import axios from "axios";
 import Image from "../../atoms/imagine/Image";
 import SearchCategoriesProduct from "../../molecules/search-categories-product/SearchCategoriesProduct";
 
+
 const HeaderCenterSectionWtyczka = () => {
   //pobieranie danych z serwera
   const [categories, setCategories] = useState([]);
@@ -17,13 +18,10 @@ const HeaderCenterSectionWtyczka = () => {
       });
   }, []);
 
+  // zamiana formatu danych
   const categoriesOptions = categories.map((categorie) => {
     return { value: categorie.id, label: categorie.name };
   });
-  console.log(categoriesOptions);
-
-  //wybranie kategorji z select
-  const [selectedCategory, setSelectedCategory] = useState();
 
   return (
     <div className="d-flex container justify-content-between align-items-center pt-4 pb-4">
@@ -31,9 +29,7 @@ const HeaderCenterSectionWtyczka = () => {
         <Image src={Logo} alt="Logo" />
       </a>
       <SearchCategoriesProduct
-        selectedCategory={selectedCategory}
         categoriesOptions={categoriesOptions}
-        setSelectedCategory={setSelectedCategory}
       />
       <div className="d-flex align-items-center gap-3">
         <Badge className="icon-compaire es-fs-13" />
