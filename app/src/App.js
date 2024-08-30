@@ -4,7 +4,10 @@ import "slick-carousel/slick/slick-theme.css";
 import "./App.scss";
 import "./assets/scss/custom/base/icons.scss";
 import { Routes, Route } from "react-router-dom";
+import Modal from 'react-modal';
 
+
+Modal.setAppElement();
 function App() {
   return (
     <div className="App">

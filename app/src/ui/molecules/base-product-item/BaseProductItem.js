@@ -1,7 +1,8 @@
 import Image from "../../../ui/atoms/imagine/Image";
 import Tomatos from "../../../assets/img/p-img-1.png";
+import { Link } from "react-router-dom"
 
-const BaseProductItem = ({isHorizontal=false}) => {
+const BaseProductItem = ({ id, isHorizontal=false}) => {
   return (
     <div className={`pb-3 rounded-1 shadow-lg bg-white position-relative es-product-base-item-wrapper ${isHorizontal ? "d-flex es-horizontal": ""}`}>
       <div className="d-flex justify-content-center align-items-center pt-4 pb-4">
@@ -35,9 +36,9 @@ const BaseProductItem = ({isHorizontal=false}) => {
           <span className="icon-star-full text-warning"></span>
           <span className="icon-star-full text-warning"></span>
         </div>
-        <a className="text-decoration-none text-black h4 fw-bold m-0" href="#">
+        <Link to={`/product/${id}`} className="text-decoration-none text-black h4 fw-bold m-0" href="#">
           Fresh Red Tomatos
-        </a>
+        </Link>
         <div className="d-flex justify-content-center align-items-center gap-2 mt-3 mb-3">
           <span className="text-secondary fw-bold text-decoration-line-through fs-5">
             $12.99

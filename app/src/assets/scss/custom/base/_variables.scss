@@ -11,6 +11,7 @@ $es-gray-900: #444444;
 $es-white: #ffffff;
 $es-black: #000000;
 $red: #dc3545;
+$cyan: #0dcaf0;
 $es-contact-form-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
 //Wlasne zmienne - tekst
@@ -25,6 +26,7 @@ $theme-colors: (
   "secondary": $es-gray-800,
   "warning": $es-orange-300,
   "danger": $red,
+  "info":   $cyan
 );
 
 //tekst
