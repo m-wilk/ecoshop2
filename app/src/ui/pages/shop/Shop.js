@@ -9,6 +9,7 @@ import BaseProductItem from "../../molecules/base-product-item/BaseProductItem";
 import { useSearchParams } from "react-router-dom";
 import ShopBanner from "../../organism/shop-banner/ShopBanner";
 
+
 // dane do sidebara list
 const dataFromBackend = [
   {
@@ -244,7 +245,7 @@ const Shop = (props) => {
           <div className="row mt-5">
             {products.map((product) => (
               <div className="col-xl-4 col-sm-6">
-                <BaseProductItem />
+                <BaseProductItem id={product.id}/>
               </div>
             ))}
           </div>

@@ -78,7 +78,6 @@ const HeaderBottomSectionWtyczka = () => {
                       <span className="icon-arrow-down es-fs-07 me-2"></span>
                     ),
                     Control: (props) => {
-                      console.log(props);
                       return (
                         <components.Control {...props}>
                           <span className="icon-toogle-menu es-fs-07 ms-2 me-3"></span>
