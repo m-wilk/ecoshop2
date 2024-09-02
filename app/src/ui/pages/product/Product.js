@@ -7,6 +7,8 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Select from "react-select";
 import Modal from "react-modal";
+import Image from "../../atoms/imagine/Image";
+import Author from "../../../assets/img/aurthor-img-1.png";
 
 const BreadcrumbsData = [
   {
@@ -79,6 +81,7 @@ const Product = () => {
   };
 
   const [modalIsOpen, setIsOpen] = useState(false);
+
   function openModal() {
     setIsOpen(true);
   }
@@ -86,6 +89,8 @@ const Product = () => {
   function closeModal() {
     setIsOpen(false);
   }
+
+  const [selectedSection, setSelectedSection] = useState("description");
 
   return (
     <div className="pt-5 pb-5">
@@ -242,7 +247,12 @@ const Product = () => {
                 contentLabel="Example Modal"
               >
                 <h2>Report Products</h2>
-                <button className="btn position-absolute top-0 end-0 rounded-circle bg-danger es-size-box-45px" onClick={closeModal}><span className="icon-plus text-white"></span></button>
+                <button
+                  className="btn position-absolute top-0 end-0 rounded-circle bg-danger es-size-box-45px"
+                  onClick={closeModal}
+                >
+                  <span className="icon-plus text-white"></span>
+                </button>
                 <form>
                   <div className="d-flex flex-column mb-3">
                     <label> Enter Report Ttile* </label>
@@ -250,10 +260,12 @@ const Product = () => {
                   </div>
                   <div className="d-flex flex-column">
                     <label> Enter Report Ttile* </label>
-                    <textarea  placeholder="Type here"></textarea>
+                    <textarea placeholder="Type here"></textarea>
                   </div>
                 </form>
-                <button className="btn bg-primary text-white fw-bold px-4 py-3 w-100 mt-4">Submit Raport</button>
+                <button className="btn bg-primary text-white fw-bold px-4 py-3 w-100 mt-4">
+                  Submit Raport
+                </button>
               </Modal>
               <div className="d-flex align-items-center justify-content-start gap-2 mt-3">
                 <p className="m-0">Shere This:</p>
@@ -263,6 +275,99 @@ const Product = () => {
                   <span className="icon-youtube"></span>
                 </div>
               </div>
+            </div>
+          </div>
+          <div>
+            <nav className="border-bottom">
+              <button
+                onClick={() => {
+                  setSelectedSection("description");
+                }}
+                className={`btn fw-bold border-0 ${selectedSection === "description" ? "text-black" : "text-primary"}`}
+              >
+                Description
+              </button>
+              <button
+                onClick={() => {
+                  setSelectedSection("rewievs");
+                }}
+                className={`btn fw-bold border-0 ${selectedSection === "rewievs" ? "text-black" : "text-primary"}`}
+              >
+                Reviews
+              </button>
+              <button
+                onClick={() => {
+                  setSelectedSection("sellerinfo");
+                }}
+                className={`btn fw-bold border-0 ${selectedSection === "sellerinfo" ? "text-black" : "text-primary"}`}
+              >
+                Seller Info
+              </button>
+            </nav>
+            <div className="mt-4">
+              {selectedSection === "description" ? (
+                <div>
+                  <h5>Introduction</h5>
+                  <p className="text-secondary lh-lg">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries
+                    but also the on leap into electronic typesetting, remaining
+                    essentially unchanged. It wasn’t popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum
+                    passages, andei more recently with desktop publishing
+                    software like Aldus PageMaker including versions of Lorem
+                    Ipsum to make a type specimen book.
+                  </p>
+                  <h5>Features :</h5>
+                  <ul className="text-secondary lh-lg p-0 ms-3">
+                    <li>slim body with metal cover</li>
+                    <li>
+                      latest Intel Core i5-1135G7 processor (4 cores / 8
+                      threads)
+                    </li>
+                    <li>8GB DDR4 RAM and fast 512GB PCIe SSD</li>
+                    <li>
+                      NVIDIA GeForce MX350 2GB GDDR5 graphics card backlit
+                      keyboard, touchpad with gesture support
+                    </li>
+                  </ul>
+                </div>
+              ) : null}
+              {selectedSection === "rewievs" ? (
+                <div>
+                  <h5>Reviews</h5>
+                  <div className="mt-4 d-flex align-items-center justify-content-between">
+                    <div className="d-flex align-items-center gap-3">
+                      <Image src={Author} />
+                      <div>
+                        <h5 className="m-0">Sajjad Hossain</h5>
+                        <p className="m-0 text-secondary">London, UK</p>
+                      </div>
+                    </div>
+                    <div className="mb-2 mt-2">
+                      <span className="icon-star-full text-warning"></span>
+                      <span className="icon-star-full text-warning"></span>
+                      <span className="icon-star-full text-warning"></span>
+                      <span className="icon-star-full text-warning"></span>
+                      <span className="icon-star-full text-warning"></span>
+                      <sup className="ms-2">(5.0)</sup>
+                    </div>
+                  </div>
+                  <p className="mt-3 text-secondary">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the redi 1500s, when an
+                    unknown printer took a galley of type and scrambled it to
+                    make a type specimen book. It has survived not only five
+                    centuries but also the on leap into electronic typesetting,
+                    remaining
+                  </p>
+                </div>
+              ) : null}
+              {selectedSection === "sellerinfo" ? <div></div> : null}
             </div>
           </div>
         </div>
